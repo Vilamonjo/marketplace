@@ -1,0 +1,47 @@
+<body>
+  <main>
+    <ul>
+      <li class="left"><a class="active">MarketPlace EOI</a></li>
+      <li class="left">
+        <a class="notification"
+          ><span>Usuarios: </span>
+          <span #numUs id="numUs" class="badge">{{ numeroUsuarios }}</span></a
+        >
+      </li>
+      <li class="left">
+        <a class="notification"
+          ><span>Articulos: </span>
+          <span #numArt id="numArt" class="badge">{{
+            numeroArticulos
+          }}</span></a
+        >
+      </li>
+      <li class="left">
+        <a class="notification"
+          ><span>Pedidos: </span>
+          <span #numPed id="numPed" class="badge">{{ numeroPedidos }}</span></a
+        >
+      </li>
+      <li class="right"><a [routerLink]="['']">Salir</a></li>
+      <li class="right">
+        <a>Usuario: {{ usuarioLogged.nombre }}</a>
+      </li>
+    </ul>
+
+    <div class="botonesFlex">
+      <button (click)="irAUsuario()">Usuarios</button>
+      <button (click)="irAArticulo()">Artículos</button>
+      <button (click)="irAPedido()">Pedidos</button>
+    </div>
+    <br /><router-outlet
+      (datoSalida)="recibirDatosHijos($event)"
+    ></router-outlet>
+  </main>
+</body>
+
+<footer>
+  <p>
+    Market Place EOI 2021, Tel: 190209012. @-mail: marketplace@eoi.com,
+    www.marketplace.com
+  </p>
+</footer>

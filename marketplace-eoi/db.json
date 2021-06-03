@@ -1,0 +1,145 @@
+{
+  "articulos": [
+    {
+      "nombre": "RTX 3070",
+      "precio": 800,
+      "stock": 0,
+      "id": 1
+    },
+    {
+      "nombre": "GTX 1660 Super",
+      "precio": 200,
+      "stock": 2,
+      "id": 2
+    },
+    {
+      "nombre": "16GB DDR4",
+      "precio": 40,
+      "stock": 100,
+      "id": 4
+    },
+    {
+      "nombre": "Placa base super buena",
+      "precio": 50,
+      "stock": 4,
+      "id": 5
+    }
+  ],
+  "usuarios": [
+    {
+      "nombre": "Test",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "nombre": "Usuario",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "nombre": "soy una taza",
+      "password": "password",
+      "id": 3
+    },
+    {
+      "nombre": "user3",
+      "password": "password",
+      "id": 4
+    },
+    {
+      "nombre": "admin",
+      "password": "admin",
+      "id": 5
+    },
+    {
+      "nombre": "Vilamonjo",
+      "password": "9876",
+      "id": 6
+    },
+    {
+      "nombre": "viki",
+      "password": "gatitos",
+      "id": 7
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "fecha": "2021-05-10",
+      "nombre": "Pedido Fernando",
+      "idUsuario": 1,
+      "articulosPedido": [
+        {
+          "id": 1,
+          "idPedido": 1,
+          "idArticulo": 3,
+          "cantidadArticulo": 2
+        },
+        {
+          "id": 2,
+          "idPedido": 1,
+          "idArticulo": 1,
+          "cantidadArticulo": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fecha": "2005-07-05",
+      "nombre": "Pedido Manolo",
+      "idUsuario": 2,
+      "articulosPedido": [
+        {
+          "id": 2,
+          "idPedido": 2,
+          "idArticulo": 1,
+          "cantidadArticulo": 1
+        },
+        {
+          "id": 4,
+          "idPedido": 2,
+          "idArticulo": 4,
+          "cantidadArticulo": 3
+        }
+      ]
+    }
+  ],
+  "pedidoArticulos": [
+    {
+      "id": 1,
+      "idPedido": 1,
+      "idArticulo": 3,
+      "cantidadArticulo": 2
+    },
+    {
+      "id": 2,
+      "idPedido": 2,
+      "idArticulo": 1,
+      "cantidadArticulo": 1
+    },
+    {
+      "id": 3,
+      "idPedido": 1,
+      "idArticulo": 1,
+      "cantidadArticulo": 1
+    },
+    {
+      "id": 4,
+      "idPedido": 2,
+      "idArticulo": 4,
+      "cantidadArticulo": 3
+    },
+    {
+      "idPedido": 3,
+      "idArticulo": 3,
+      "cantidadArticulo": 5,
+      "id": 5
+    },
+    {
+      "idPedido": 3,
+      "idArticulo": 3,
+      "cantidadArticulo": 20,
+      "id": 6
+    }
+  ]
+}

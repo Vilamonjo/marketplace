@@ -1,0 +1,11 @@
+<div class="fichaFlex">
+<section [formGroup]="formulario">
+    <p>{{articuloLlegada.nombre}}</p>
+    <p>{{articuloLlegada.stock}}</p>
+    <p>Cantidad:</p>
+    <input placeholder="cantidad" type="number" formControlName="cantidad">
+    <button (click)="anyadirArticulo()">Añadir</button>
+    <p *ngIf="demasiadosItems">No Puedes comprar Tantos!</p>
+    <p *ngIf="demasiadosPocosIntems">No se aceptan devoluciones</p>
+</section>
+</div>

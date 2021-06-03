@@ -1,0 +1,52 @@
+GET http://localhost:3000/articulos
+
+###
+
+GET http://localhost:3000/usuarios
+
+###
+
+GET http://localhost:3000/usuarios?nombre=user&password=password
+
+###
+
+GET http://localhost:3000/pedidos
+
+###
+
+POST http://localhost:3000/articulos
+Content-Type: application/json
+
+{
+        "nombre":"Tarjeta Gráfica GTX 3050",
+        "precio":"600",
+        "stock":"70"   
+}
+
+###
+
+POST http://localhost:3000/usuarios
+Content-Type: application/json
+
+{
+        "nombre":"fernando",
+        "password": "1234"  
+}
+
+###
+POST http://localhost:3000/pedidos
+Content-Type: application/json
+
+{
+        "fecha": "2021-05-10",
+        "nombre": "PED-00001",
+        "articulos": "[
+                
+        ]"
+}
+
+###
+
+DELETE http://localhost:3000/articulos/1
+
+###

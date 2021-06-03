@@ -1,0 +1,14 @@
+<main>
+<section class='login'>
+    <h2>Login</h2>
+    <article class='formulario'>
+        <p>Usuario</p>
+   <input class='user' (keyup)="getNombreInput($event)" placeholder="Usuario">
+    <p>Contraseña</p>
+    <input class='password' (keyup)="getPasswordInput($event)" placeholder="Contraseña" type="password">
+    </article>
+   
+    <p><button class="loginButton" (click)="iniciarSesion()">Iniciar sesión</button></p>
+    <!-- <p><button class="soyunaclase" (click)="funcionTest2()">TEST</button></p> -->
+</section>
+</main>

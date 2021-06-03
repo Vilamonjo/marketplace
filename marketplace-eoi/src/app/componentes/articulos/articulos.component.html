@@ -1,0 +1,43 @@
+<div class="botonesClases">
+<button (click)="nuevoClick()">Nuevo</button>
+<button (click)="consultaClick()">Consultar</button>
+</div>
+
+<section *ngIf="mostrarTodo">
+    <section *ngIf="nuevoSeleccionado">
+        <div class="menuSeleccion">
+        <form id="ArticuloNuevo" [formGroup]="formulario">
+            <ul class="formularioFlex">
+            <p>Añadir nuevo articulo</p>
+            <li>
+            <label for="nombre">Nombre Articulo</label>
+            <input formControlName="nombreArticulo" type="text" placeholder="Nombre"/>
+        </li>
+        <li>
+            <label for="precio">Precio</label>
+            <input formControlName="precio" type="number" placeholder="Precio"/>
+        </li>
+        <li>
+            <label for="stock">Stock Inicial</label>
+            <input formControlName="stock" type="number" placeholder="stock"/>
+        </li>
+            <button (click)="nuevoArticulo()">Registrar Articulo</button>
+        </ul>
+        </form>
+    </div>
+    </section>
+    <section *ngIf="consultaSeleccionado">
+        <ul class="menuSeleccion">
+            <div class="formularioFlex">
+        <label for="nombreArticulo">Nombre de Articulo</label>
+        <input  type="text"
+                placeholder="Nombre de usuario" (keyup)="consultarArticulos($event)"/>
+            </div>
+        </ul>
+        <section *ngFor="let articulo of articulosEncontrados">
+            <app-ficha-articulo [articuloLlegada]="articulo"></app-ficha-articulo>
+        </section>
+    
+    </section> 
+    
+</section>

@@ -1,0 +1,65 @@
+<div class="botonesClases">
+    <button (click)="nuevoClick()">Nuevo</button>
+    <button (click)="consultaClick()">Consultar</button>
+</div>
+
+<section *ngIf="nuevoSeleccionado">
+    <div class="menuSeleccion">
+        <form id="UsuarioNuevo" [formGroup]="formulario">
+            <ul class="formularioFlex">
+                <li>
+                    <label for="usuario">Usuario</label>
+                    <input formControlName="usuario" type="text"
+                        placeholder="Usuario" />
+                </li>
+                <li>
+                    <label for="password">Contraseña</label>
+                    <input
+                        formControlName="password"
+                        type="password"
+                        placeholder="Contraseña"
+                        />
+                </li>
+                <button (click)="nuevoUsuario()">Registrar Usuario</button>
+            </ul>
+            <section *ngIf="usuarioCreado">Usuario Creado correctamente</section>
+        </form>
+    </div>
+</section>
+
+<section *ngIf="consultaSeleccionado">
+    <ul class="menuSeleccion">
+        <div class="formularioFlex">
+            <label for="usuario">Nombre de usuario</label>
+            <input
+                [(ngModel)]="usuarioModel"
+                type="text"
+                placeholder="Nombre de usuario"
+                (keyup)="consultarUsuario($event)"
+                />
+        </div>
+    </ul>
+    <section *ngFor="let usuario of usuariosEncontrados">
+        <app-ficha-usuario [usuarioLlegada]="usuario"></app-ficha-usuario>
+    </section>
+    <!--  <section *ngFor="let usuario of usuariosConsulta">
+        <p>{{usuario.nombre}}</p>
+        <p>Pedidos: </p>
+        <button (click)="actualizarClick(usuario.id)">Actualizar</button>
+        <section *ngIf="actualizarSeleccionado">
+            <form id="UsuarioActualizar" [formGroup]="formulario">
+            <label for="usuario">Usuario</label>
+            <input formControlName="usuario" type="text" placeholder="Usuario"/>
+            <label for="password">Contraseña</label>
+            <input formControlName="password" type="password" placeholder="Contraseña"/>
+            <button (click)="actualizarUsuario()">Actualizar Usuario</button>
+        </form>
+        </section>
+        <button (click)="eliminarClick()">Eliminar</button>
+        <section *ngIf="eliminarSeleccionado">
+            ¿Está seguro de que desea eliminar este usuario?
+        <button (click)="eliminarUsuario()">Sí</button>
+        </section>
+    </section>
+</section>-->
+</section>

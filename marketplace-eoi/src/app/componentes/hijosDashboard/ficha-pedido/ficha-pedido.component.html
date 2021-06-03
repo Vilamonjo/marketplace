@@ -1,0 +1,18 @@
+<div class="fichaFlex">
+<section *ngIf="mostrarTodo">
+    <section class="atributos">
+        <p>{{pedidoLlegada.nombre}}</p>
+        <p>Fecha: {{pedidoLlegada.fecha | date:'short'}}</p>
+        <p>Total: {{totalPedido | currency:'EUR'}}</p>
+        <section *ngFor="let articulo of pedidoLlegada.articulosPedido">
+            <p>NombreArticulo x Cantidad</p> 
+        </section>
+    </section>
+    <section class="botones">
+        <button (click)="borrarClick()">Borrar</button>
+        <label *ngIf="borrarSeleccionado">Seguro?</label>
+        <button *ngIf="borrarSeleccionado" (click)="borrarPedido()">Si</button>
+    </section>
+</section>
+</div>
+

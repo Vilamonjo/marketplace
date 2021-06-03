@@ -1,0 +1,24 @@
+<div class="fichaFlex">
+<section *ngIf="mostrarTodo">
+    <section class="atributos">
+        <form [formGroup]="formulario">
+        <p *ngIf="!actualizarSeleccionado">{{articuloLlegada.nombre}}</p>
+        <input *ngIf="actualizarSeleccionado" placeholder={{articuloLlegada.nombre}}
+            type="text" formControlName="nombre">
+        <p *ngIf="!actualizarSeleccionado">{{articuloLlegada.precio | currency:'EUR'}}</p>
+        <input *ngIf="actualizarSeleccionado" placeholder={{articuloLlegada.precio}}
+            type="number" formControlName="precio">
+        <p *ngIf="!actualizarSeleccionado">En Stock: {{articuloLlegada.stock}}</p>
+        <input *ngIf="actualizarSeleccionado" placeholder={{articuloLlegada.stock}}
+            type="number" formControlName="stock">
+        <button *ngIf="actualizarSeleccionado" (click)="actualizarArticulo()">Actualizar Articulo</button>
+    </form>
+    </section>
+    <section class="botones">
+        <button (click)="actualizarClick()">Actualizar</button><br/>
+        <button (click)="borrarClick()">Borrar</button>
+        <label *ngIf="borrarSeleccionado">Seguro?</label>
+        <button *ngIf="borrarSeleccionado" (click)="borrarArticulo()">Si</button>
+    </section>
+</section>
+</div>

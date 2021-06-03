@@ -1,0 +1,39 @@
+<div class="botonesClases">
+<button (click)="nuevoClick()">Nuevo</button>
+<button (click)="consultaClick()">Consultar</button>
+</div>
+<section *ngIf="mostrarTodo">
+    
+    <section *ngIf="nuevoSeleccionado" >
+        <div class="menuSeleccion">
+            <ul class="formularioFlex">
+            <p>Añadir nuevo Pedido</p>
+            <li>
+            <label for="nombre"  (keyup)="nombrePedido($event)">Nombre Pedido </label>
+            <input type="text" placeholder="Nombre"/>
+            <button (click)="nuevoPedido()">Registrar Pedido</button>
+        </li>
+        <li>
+            <label for="articulo">Busqueda Articulo</label>
+            <input type="text" placeholder="Articulo" (keyup)="consultarArticulos($event)"/>
+        </li>
+        </ul>
+        </div>
+    </section>
+    <section *ngFor="let articulo of articulosEncontrados">
+        <app-mini-ficha-articulo [articuloLlegada]="articulo">articulo</app-mini-ficha-articulo>
+    </section>
+
+    <section *ngIf="consultaSeleccionado">
+        <ul class="menuSeleccion">
+            <div class="formularioFlex">
+        <label for="nombreArticulo">Nombre de Pedido</label>
+        <input  type="text"
+                placeholder="Nombre de usuario" (keyup)="consultarPedidos($event)"/>
+        <section *ngFor="let pedido of pedidosEncontrados">
+            <app-ficha-pedido [pedidoLlegada]="pedido"></app-ficha-pedido>
+        </section>
+    </div>
+    </ul>
+    </section> 
+</section>

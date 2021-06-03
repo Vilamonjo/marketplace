@@ -1,0 +1,79 @@
+body {
+  font-family: Arial;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+
+  top: 0;
+  width: 100%;
+}
+
+li.left {
+  float: left;
+}
+li.right {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1em 1em;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+footer {
+  position: fixed;
+  height: 50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 3px;
+  background-color: lightblue;
+  border: 1px solid blue;
+  color: blue;
+  font-family: Arial;  
+}
+.notification .badge {
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+section {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.botonesFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  margin-left: 2em;
+  margin-right: 5em;
+  justify-content: space-around;
+}
+.botonesFlex button:focus {
+  background-color: green;
+}
+.botonesFlex button {
+  border: 1px solid green;
+  padding: 10px 20px;
+  border-radius: 20%;
+}
+.botonesFlex button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}

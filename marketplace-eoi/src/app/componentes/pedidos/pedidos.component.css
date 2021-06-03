@@ -1,0 +1,43 @@
+.botonesClases{
+    display:flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    float:left;
+    height: 5em;
+    border: 1px solid black;
+    padding: 1%;
+}
+.botonesClases button{
+    border: 1px solid green;
+    padding: 10px 20px;
+    border-radius: 20%;
+}
+.botonesClases button:focus{
+    background-color: green;
+}
+.botonesClases button:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.menuSeleccion{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+}
+.formularioFlex{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+
+}
+.formularioFlex label, input{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
